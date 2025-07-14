@@ -94,7 +94,7 @@ export default function ProgressPage() {
             {isSupported && photos.length > 0 && (
               <button
                 onClick={handleTakePhoto}
-                className="w-full btn-primary flex items-center justify-center gap-2"
+                className="w-full btn btn-primary flex items-center justify-center gap-2"
               >
                 <Camera className="w-5 h-5" />
                 Take Progress Photo
@@ -119,7 +119,7 @@ export default function ProgressPage() {
                 {isSupported ? (
                   <button
                     onClick={handleTakePhoto}
-                    className="btn-primary flex items-center gap-2 mx-auto"
+                    className="btn btn-primary flex items-center gap-2 mx-auto"
                   >
                     <Camera className="w-5 h-5" />
                     Take First Photo
@@ -138,7 +138,7 @@ export default function ProgressPage() {
             {isSupported && (
               <button
                 onClick={handleTakePhoto}
-                className="w-full btn-primary flex items-center justify-center gap-2"
+                className="w-full btn btn-primary flex items-center justify-center gap-2"
               >
                 <Camera className="w-5 h-5" />
                 Take Progress Photo

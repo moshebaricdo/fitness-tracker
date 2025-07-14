@@ -146,14 +146,14 @@ export default function HomePage() {
             <div className="flex gap-3 justify-center">
               <button
                 onClick={handleAddWorkout}
-                className="btn-primary flex items-center gap-2"
+                className="btn btn-primary flex items-center gap-2"
               >
                 <Plus className="w-4 h-4" />
                 Create Workout
               </button>
               <button
                 onClick={() => router.push('/calendar')}
-                className="btn-secondary flex items-center gap-2"
+                className="btn btn-secondary flex items-center gap-2"
               >
                 <Calendar className="w-4 h-4" />
                 View Calendar

@@ -153,14 +153,14 @@ export const QuickAddForm: React.FC<QuickAddFormProps> = ({
             <button
               type="submit"
               disabled={isLoading || !customFood.trim() || !customProtein}
-              className="flex-1 btn-primary"
+              className="flex-1 btn btn-primary"
             >
               {isLoading ? 'Adding...' : 'Add'}
             </button>
             <button
               type="button"
               onClick={() => setShowCustomForm(false)}
-              className="btn-secondary"
+              className="btn btn-secondary"
             >
               Cancel
             </button>

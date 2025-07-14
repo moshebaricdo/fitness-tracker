@@ -115,7 +115,7 @@ export const NutritionForm: React.FC<NutritionFormProps> = ({
         <button
           type="submit"
           disabled={isSubmitting || !foodName.trim() || !proteinEstimate}
-          className="btn-primary flex items-center gap-2 flex-1"
+          className="btn btn-primary flex items-center gap-2 flex-1"
         >
           <Plus className="w-4 h-4" />
           {isSubmitting ? 'Saving...' : (isEditing ? 'Update Entry' : 'Add Entry')}
@@ -124,7 +124,7 @@ export const NutritionForm: React.FC<NutritionFormProps> = ({
         <button
           type="button"
           onClick={onCancel}
-          className="btn-secondary px-4"
+          className="btn btn-secondary px-4"
         >
           <X className="w-4 h-4" />
         </button>

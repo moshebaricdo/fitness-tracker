@@ -31,14 +31,14 @@ export const WorkoutPreviewCard: React.FC<WorkoutPreviewCardProps> = ({
           <div className="flex gap-2 justify-center">
             <button
               onClick={() => router.push('/create-workout')}
-              className="btn-secondary text-sm"
+              className="btn btn-secondary btn-sm"
             >
               <Calendar className="w-4 h-4 mr-1" />
               Schedule Workout
             </button>
             <button
               onClick={() => router.push('/progress')}
-              className="btn-primary text-sm"
+              className="btn btn-primary btn-sm"
             >
               View Progress
             </button>
@@ -74,13 +74,13 @@ export const WorkoutPreviewCard: React.FC<WorkoutPreviewCardProps> = ({
             <div className="flex gap-2">
               <button
                 onClick={() => router.push('/progress')}
-                className="btn-primary text-sm"
+                className="btn btn-primary btn-sm"
               >
                 Take Progress Photo
               </button>
               <button
                 onClick={() => router.push('/calendar')}
-                className="btn-secondary text-sm"
+                className="btn btn-secondary btn-sm"
               >
                 View Calendar
               </button>
@@ -139,14 +139,14 @@ export const WorkoutPreviewCard: React.FC<WorkoutPreviewCardProps> = ({
           <div className="flex gap-2">
             <button
               onClick={onStartWorkout}
-              className="btn-primary flex items-center gap-2"
+              className="btn btn-primary flex items-center gap-2"
             >
               <Play className="w-4 h-4" />
               Start Workout
             </button>
             <button
               onClick={() => router.push(`/workout/${todaysWorkout.id}`)}
-              className="btn-secondary text-sm"
+              className="btn btn-secondary btn-sm"
             >
               View Details
             </button>

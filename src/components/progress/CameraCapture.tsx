@@ -108,7 +108,7 @@ export const CameraCapture: React.FC<CameraCaptureProps> = ({
           </p>
           <button
             onClick={onCancel}
-            className="w-full btn-primary"
+            className="w-full btn btn-primary"
           >
             OK
           </button>
@@ -131,14 +131,14 @@ export const CameraCapture: React.FC<CameraCaptureProps> = ({
           <div className="flex gap-2">
             <button
               onClick={handleRequestPermission}
-              className="flex-1 btn-primary"
+              className="flex-1 btn btn-primary"
               disabled={loading}
             >
               {loading ? 'Requesting...' : 'Allow Camera'}
             </button>
             <button
               onClick={onCancel}
-              className="btn-secondary"
+              className="btn btn-secondary"
             >
               Cancel
             </button>
