@@ -1,0 +1,335 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans;
+    @apply min-h-screen;
+    @apply overscroll-none;
+  }
+  
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  /* Button Components */
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 font-medium rounded-lg;
+    @apply transition-all duration-200 ease-in-out;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply active:scale-95;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700;
+    @apply focus:ring-primary-500;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-900 hover:bg-gray-300;
+    @apply focus:ring-gray-500;
+  }
+  
+  .btn-success {
+    @apply bg-success-600 text-white hover:bg-success-700;
+    @apply focus:ring-success-500;
+  }
+  
+  .btn-danger {
+    @apply bg-red-600 text-white hover:bg-red-700;
+    @apply focus:ring-red-500;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-current bg-transparent hover:bg-current hover:text-white;
+  }
+  
+  .btn-sm {
+    @apply px-3 py-1.5 text-sm;
+  }
+  
+  .btn-lg {
+    @apply px-6 py-3 text-lg;
+  }
+  
+  /* Input Components */
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+    @apply transition-all duration-200;
+    @apply disabled:bg-gray-100 disabled:cursor-not-allowed;
+  }
+  
+  .input-error {
+    @apply border-red-500 focus:ring-red-500;
+  }
+  
+  .textarea {
+    @apply input resize-none;
+    @apply min-h-[80px];
+  }
+  
+  /* Card Components */
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200;
+    @apply transition-all duration-200;
+  }
+  
+  .card-hover {
+    @apply hover:shadow-md hover:border-gray-300;
+  }
+  
+  .card-padding {
+    @apply p-4;
+  }
+  
+  .card-header {
+    @apply px-4 py-3 border-b border-gray-200;
+  }
+  
+  .card-body {
+    @apply p-4;
+  }
+  
+  .card-footer {
+    @apply px-4 py-3 border-t border-gray-200;
+  }
+  
+  /* Progress Components */
+  .progress-bar {
+    @apply w-full bg-gray-200 rounded-full h-2;
+  }
+  
+  .progress-fill {
+    @apply h-full bg-primary-600 rounded-full;
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  /* Badge Components */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .badge-primary {
+    @apply bg-primary-100 text-primary-800;
+  }
+  
+  .badge-success {
+    @apply bg-success-100 text-success-800;
+  }
+  
+  .badge-warning {
+    @apply bg-warning-100 text-warning-800;
+  }
+  
+  .badge-danger {
+    @apply bg-red-100 text-red-800;
+  }
+  
+  .badge-gray {
+    @apply bg-gray-100 text-gray-800;
+  }
+  
+  /* List Components */
+  .list-item {
+    @apply py-3 flex items-center justify-between;
+    @apply border-b border-gray-100 last:border-b-0;
+  }
+  
+  .list-item-clickable {
+    @apply list-item cursor-pointer;
+    @apply hover:bg-gray-50 transition-colors duration-150;
+    @apply active:bg-gray-100;
+  }
+  
+  /* Animation Classes */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  .animate-bounce-in {
+    animation: bounceIn 0.5s ease-out;
+  }
+  
+  /* Loading Spinner */
+  .spinner {
+    @apply inline-block w-4 h-4 border-2 border-current border-t-transparent rounded-full;
+    animation: spin 1s linear infinite;
+  }
+  
+  .spinner-lg {
+    @apply w-8 h-8 border-4;
+  }
+  
+  /* PWA Specific Styles */
+  .pwa-safe-area {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  .pwa-header {
+    @apply sticky top-0 z-50 bg-white border-b border-gray-200;
+    @apply pwa-safe-area;
+  }
+  
+  .pwa-bottom-nav {
+    @apply fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200;
+    @apply pwa-safe-area;
+  }
+  
+  /* Touch Optimized */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  .touch-feedback {
+    @apply active:bg-gray-100 transition-colors duration-100;
+  }
+  
+  /* Workout Specific */
+  .exercise-item {
+    @apply card card-padding mb-3;
+    @apply flex items-center justify-between;
+  }
+  
+  .exercise-completed {
+    @apply bg-success-50 border-success-200;
+  }
+  
+  .focus-area-badge {
+    @apply badge text-xs font-medium;
+  }
+  
+  /* Nutrition Specific */
+  .nutrition-card {
+    @apply card card-padding;
+    @apply flex items-center justify-between;
+  }
+  
+  .protein-progress {
+    @apply progress-bar mb-2;
+  }
+  
+  /* Photo Gallery */
+  .photo-grid {
+    @apply grid grid-cols-2 gap-4;
+  }
+  
+  .photo-item {
+    @apply aspect-square rounded-lg overflow-hidden;
+    @apply cursor-pointer hover:opacity-90 transition-opacity;
+  }
+  
+  /* Empty States */
+  .empty-state {
+    @apply text-center py-12;
+  }
+  
+  .empty-state-icon {
+    @apply w-16 h-16 mx-auto mb-4 text-gray-400;
+  }
+  
+  .empty-state-text {
+    @apply text-gray-500 mb-4;
+  }
+}
+
+@layer utilities {
+  /* Scrollbar Styles */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Text Utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Backdrop Utilities */
+  .backdrop-blur-ios {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* PWA Install Prompt */
+.pwa-install-prompt {
+  @apply fixed bottom-20 left-4 right-4 bg-primary-600 text-white p-4 rounded-lg shadow-lg;
+  @apply animate-slide-up;
+  z-index: 1000;
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  .dark-mode {
+    @apply bg-gray-900 text-white;
+  }
+  
+  .dark-mode .card {
+    @apply bg-gray-800 border-gray-700;
+  }
+  
+  .dark-mode .input {
+    @apply bg-gray-800 border-gray-700 text-white;
+  }
+} 
